@@ -1,8 +1,8 @@
 body {
 background-color: black;
 width: 640px;
-margin-left: 20px;
-margin-bottom: 60px;
+margin-left: 0px;
+margin-bottom: 0px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size: 20px;
 color:white;
@@ -104,34 +104,46 @@ canvas{
 }
 
 .active {
-  cursor:default;
+  cursor: pointer;
 }
 
 #mylives{
   font-size:25px;
+  width: 50%;
+  height: 100px;
   text-align:center;
   display:inline block;
   border: 5px;
   margin: 10px 5px 5px 10px;
 }
 
+#play {
+  background:rgb(236, 99, 49);
+  margin: 10px 10px 10px 10px;
+}
+#pause {
+  background: rgb(234, 133, 97);
+  margin: 10px;
+}
+#stop {
+  background: #e7b6a4;
+  margin: 10px;
+}
 button{
   
-  background:coral;
+  background:#dc9c84;
   color: black;
   border: solid 1px white;
   text-decoration:none;
   cursor:pointer;
-  font-size:1.2em;
+  font-size: 25px;
   padding:18px 10px;
   width:180px;
   margin: 10px;
   outline: none;
-  
-    &:hover{
-      border: solid 1px white;
-      color:grey;
-    }
+}
+  .button a:hover {
+    color: white;
 }
 
 @media (max-width: 748px) {
@@ -145,3 +157,17 @@ button{
   padding:0 0 0 25px;
 }
   }
+  .footer {
+    margin-left: 0px;
+    background-color: black;
+    color: coral;
+    position: bottom-fixed;
+    font-family: "Kaushan Script";
+    padding-left: 100px;
+    border-top: 10px;
+    clear: both;
+    flex-shrink: 0;
+    text-align: center;
+}
+.footer a:hover {
+  color: white;

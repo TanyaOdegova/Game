@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Word Guess Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="icon" type="image/png" href="https://www.rorydobner.com/wp-content/uploads/2018/01/Tiger-Tile-600x600.jpg">
@@ -38,11 +38,11 @@
         </div>
         <!--row4 Instructions-->
         <div class="row4">
-            <div class="col-lg-12">
-                <h2>Press any letter to get started</h2>
-                <p>For the purposes of this game, apostrophes in the words were omitted. Instead of spaces between the words
-                    we use dashes.</p>
-            </div>
+
+            <h2>Press any letter to get started</h2>
+            <p>For the purposes of this game, apostrophes in the words were omitted. Instead of spaces between the words we
+                use dashes.</p>
+
         </div>
         <!--row5 alphabet letters in the form of buttons-->
         <div class="row5">
@@ -50,73 +50,71 @@
             </div>
         </div>
         <!--row6 here is the box for your word -->
-        <div class="row6">
-            <div class="col-lg-12">
-                <div id="hold">
-                </div>
-            </div>
+ 
+            <div id="hold">
+
+           
         </div>
         <br></br>
         <!--row7 this is a box for your lives-->
         <div class="row7">
-            <div class="col-lg-12">
-                <p id="mylives"></p>
-            </div>
+
+            <p id="mylives"></p>
+
         </div>
 
         <!--row8 this is a box for your Clue sentence-->
         <div class="row8">
-            <div class="col-lg-12">
-                <p id="clue">Clue -</p>
-            </div>
+
+            <p id="clue">Clue -</p>
+
         </div>
         <!--row9 this is a box with a stickman-->
         <div class="row9">
-            <div class="col-lg-12">
-                <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
-            </div>
+
+            <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+
         </div>
         <!-- Row10 with all the songs. not visible right now-->
         <!--song 1 Can't Stop by the RHCP-->
         <div class="row10">
-            <div class="col-lg-12">
-                <div id="music">
-                    <audio id="Cant-Stop">
-                        <source src="assets/music/Cant-Stop.mp3" type="audio/mp3">
-                    </audio>
-                    <!--Song 2 Eue of the Yiger-->
-                    <audio id="Eye-of-the-Tiger">
-                        <source src="assets/music/Eye-of-the-Tiger.mp3" type="audio/mp3">
-                    </audio>
-                    <!--song 3 Fighter by Christina Aguilera-->
-                    <audio id="Fighter">
-                        <source src="assets/music/Fighter.mp3" type="audio/mp3">
-                    </audio>
-                    <!-- song 4 I will Survive by Gloria Gaynor-->
-                    <audio id="I-Will-Survive">
-                        <source src="assets/music/I-Will-Survive.mp3" type="audio/mp3">
-                    </audio>
-                    <!--song 5 My Way by Frank Sinatra-->
-                    <audio id="My-Way">
-                        <source src="assets/music/My-Way.mp3" type="audio/mp3">
-                    </audio>
-                    <!--song 6 Not Afraid by Eminem-->
-                    <audio id="Not-Afraid">
-                        <source src="assets/music/Not-Afraid.mp3" type="audio/mp3">
-                    </audio>
-                    <!--song 7 Stayin Alive by Beegees-->
-                    <audio id="Stayin-Alive">
-                        <source src="assets/music/Stayin-Alive.mp3" type="audio/mp3">
-                    </audio>
-                    <!--song 8 Survivor by Destiny's Child-->
-                    <audio id="Survivor">
-                        <source src="assets/music/Survivor.mp3" type="audio/mp3">
-                    </audio>
-                    <!--White Flag by Bishop Briggs-->
-                    <audio id="White-Flag">
-                        <source src="assets/music/White-Flag.mp3" type="audio/mp3">
-                    </audio>
-                </div>
+
+            <div id="music">
+                <audio id="Cant-Stop">
+                    <source src="assets/music/Cant-Stop.mp3" type="audio/mp3">
+                </audio>
+                <!--Song 2 Eue of the Yiger-->
+                <audio id="Eye-of-the-Tiger">
+                    <source src="assets/music/Eye-of-the-Tiger.mp3" type="audio/mp3">
+                </audio>
+                <!--song 3 Fighter by Christina Aguilera-->
+                <audio id="Fighter">
+                    <source src="assets/music/Fighter.mp3" type="audio/mp3">
+                </audio>
+                <!-- song 4 I will Survive by Gloria Gaynor-->
+                <audio id="I-Will-Survive">
+                    <source src="assets/music/I-Will-Survive.mp3" type="audio/mp3">
+                </audio>
+                <!--song 5 My Way by Frank Sinatra-->
+                <audio id="My-Way">
+                    <source src="assets/music/My-Way.mp3" type="audio/mp3">
+                </audio>
+                <!--song 6 Not Afraid by Eminem-->
+                <audio id="Not-Afraid">
+                    <source src="assets/music/Not-Afraid.mp3" type="audio/mp3">
+                </audio>
+                <!--song 7 Stayin Alive by Beegees-->
+                <audio id="Stayin-Alive">
+                    <source src="assets/music/Stayin-Alive.mp3" type="audio/mp3">
+                </audio>
+                <!--song 8 Survivor by Destiny's Child-->
+                <audio id="Survivor">
+                    <source src="assets/music/Survivor.mp3" type="audio/mp3">
+                </audio>
+                <!--White Flag by Bishop Briggs-->
+                <audio id="White-Flag">
+                    <source src="assets/music/White-Flag.mp3" type="audio/mp3">
+                </audio>
             </div>
         </div>
 
@@ -125,14 +123,13 @@
 
         <!--Row11 with the buttons to play the songs-->
         <div class="row11">
-            <div clas="col-lg-12">
                 <div class="music-buttons">
                     <input type="button" value="play" id="play" />
                     <br />
                     <input type="button" value="pause" id="pause" />
                     <br />
                     <input type="button" value="stop" id="stop" />
-                </div>
+               
             </div>
         </div>
 
@@ -140,10 +137,10 @@
         <!--row12 with the buttons to play the game-->
         <!-- buttons to play or need hint, display towards very bottom of the screen-->
         <div class="row12">
-            <div class="col-lg-12">
+            
                 <button id="hint">Hint</button>
                 <button id="reset">Play again</button>
-            </div>
+            
         </div>
 
 
@@ -156,5 +153,26 @@
         crossorigin="anonymous "></script>
 </body>
 <!-- Footer -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-copyright text-center py-3">
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+                <div>
+                    <a href="https://www.linkedin.com/in/todegova">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.pinterest.com/odegovat/">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tanya____o/?hl=en">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright text-center py-3">_© 2019 Copyright
+            </div>
+</footer>
 
 </html>

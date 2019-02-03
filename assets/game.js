@@ -3,25 +3,7 @@ window.addEventListener = function () {
   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
         't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  //create variables that you'll use
-  var survivalsongs;         // Array of topics
-  var chosenCategory;     // Selected category
-  var getHint ;          // Word getHint
-  var word ;              // Selected word
-  var guess ;             // Guess
-  var guesses = [ ];      // Stored guesses
-  var lives ;             // Lives
-  var counter ;           // Count correct guesses
-  var space;              // Number of spaces in word '-'
-
-  // Get elements based on the variables you'll use above
-  var showLives = document.getElementById("mylives");
-  var showCategory = document.getElementById("category");
-  var getHint = document.getElementById("hint");
-  var showClue = document.getElementById("clue");
-
-
-
+  
   // create the list for alphabet
   var buttons = function () {
     myButtons = document.getElementById('buttons');
@@ -38,15 +20,7 @@ window.addEventListener = function () {
     }
   }
     
-  
-  // Select Category
-  var selectCat = function () {
-    if (chosenCategory === survivalsongs[0]) {
-      categoryName.innerHTML = "The Chosen Category Is Music";
-    } 
-  }
-
-  // Create guesses list, should be dependent on the list of words
+  // Create guess list, should be dependent on the list of words
    result = function () {
     wordHolder = document.getElementById('hold');
     correct = document.createElement('ul');
@@ -258,20 +232,13 @@ window.addEventListener = function () {
         ["This song has been written specifically for the Saturday Night Fever movie where John Travolta plays a young man working a dead-end job with only dancing and music helping him to see the light at the end of the tunnel"]
     ];
 
-    var categoryIndex = survivalsongs.indexOf(chosenCategory);
-    var hintIndex = chosenCategory.indexOf(word);
+    var categoryIndex = indexOf(survivalsongs);
+    var hintIndex = survivalsongs.indexOf(word);
     showClue.innerHTML = "Clue: - " +  hints [categoryIndex][hintIndex];
   };
 
-   // Reset
-
-  document.getElementById('reset').onclick = function() {
-    correct.parentNode.removeChild(correct);
-    letters.parentNode.removeChild(letters);
-    showClue.innerHTML = "";
-    context.clearRect(0, 0, 400, 400);
-    play();
-  }
+  //how to create function Play again? how to reset everything?
+ 
 }
 
 
