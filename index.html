@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Word Guess Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="https://www.rorydobner.com/wp-content/uploads/2018/01/Tiger-Tile-600x600.jpg">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/game.js"></script>
+</head>
+
+<body>
+    <div container>
+        <!--row1 with the banner image-->
+        <div class="banner">
+            <div class="col-lg-12">
+                <img src="assets/images/s-l1600 copy.jpg">
+            </div>
+        </div>
+        <!--row2 with the title of the game-->
+        <div class="row2">
+            <div class="col-lg-12">
+                <h1>Word Guess Game</h1>
+            </div>
+        </div>
+        <!--row3 a foreword from me-->
+        <div class="row3">
+            <div class="assignment">
+                <p>It's been a rocky start, to get motivated guess the name of a song about Survival. </p>
+            </div>
+        </div>
+        <!--row4 Instructions-->
+        <div class="row4">
+            <div class="col-lg-12">
+                <h2>Press any letter to get started</h2>
+                <p>For the purposes of this game, apostrophes in the words were omitted. Instead of spaces between the words
+                    we use dashes.</p>
+            </div>
+        </div>
+        <!--row5 alphabet letters in the form of buttons-->
+        <div class="row5">
+            <div id="buttons">
+            </div>
+        </div>
+        <!--row6 here is the box for your word -->
+        <div class="row6">
+            <div class="col-lg-12">
+                <div id="hold">
+                </div>
+            </div>
+        </div>
+        <br></br>
+        <!--row7 this is a box for your lives-->
+        <div class="row7">
+            <div class="col-lg-12">
+                <p id="mylives"></p>
+            </div>
+        </div>
+
+        <!--row8 this is a box for your Clue sentence-->
+        <div class="row8">
+            <div class="col-lg-12">
+                <p id="clue">Clue -</p>
+            </div>
+        </div>
+        <!--row9 this is a box with a stickman-->
+        <div class="row9">
+            <div class="col-lg-12">
+                <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+            </div>
+        </div>
+        <!-- Row10 with all the songs. not visible right now-->
+        <!--song 1 Can't Stop by the RHCP-->
+        <div class="row10">
+            <div class="col-lg-12">
+                <div id="music">
+                    <audio id="Cant-Stop">
+                        <source src="assets/music/Cant-Stop.mp3" type="audio/mp3">
+                    </audio>
+                    <!--Song 2 Eue of the Yiger-->
+                    <audio id="Eye-of-the-Tiger">
+                        <source src="assets/music/Eye-of-the-Tiger.mp3" type="audio/mp3">
+                    </audio>
+                    <!--song 3 Fighter by Christina Aguilera-->
+                    <audio id="Fighter">
+                        <source src="assets/music/Fighter.mp3" type="audio/mp3">
+                    </audio>
+                    <!-- song 4 I will Survive by Gloria Gaynor-->
+                    <audio id="I-Will-Survive">
+                        <source src="assets/music/I-Will-Survive.mp3" type="audio/mp3">
+                    </audio>
+                    <!--song 5 My Way by Frank Sinatra-->
+                    <audio id="My-Way">
+                        <source src="assets/music/My-Way.mp3" type="audio/mp3">
+                    </audio>
+                    <!--song 6 Not Afraid by Eminem-->
+                    <audio id="Not-Afraid">
+                        <source src="assets/music/Not-Afraid.mp3" type="audio/mp3">
+                    </audio>
+                    <!--song 7 Stayin Alive by Beegees-->
+                    <audio id="Stayin-Alive">
+                        <source src="assets/music/Stayin-Alive.mp3" type="audio/mp3">
+                    </audio>
+                    <!--song 8 Survivor by Destiny's Child-->
+                    <audio id="Survivor">
+                        <source src="assets/music/Survivor.mp3" type="audio/mp3">
+                    </audio>
+                    <!--White Flag by Bishop Briggs-->
+                    <audio id="White-Flag">
+                        <source src="assets/music/White-Flag.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <!--End of the song section-->
+        <br />
+
+        <!--Row11 with the buttons to play the songs-->
+        <div class="row11">
+            <div clas="col-lg-12">
+                <div class="music-buttons">
+                    <input type="button" value="play" id="play" />
+                    <br />
+                    <input type="button" value="pause" id="pause" />
+                    <br />
+                    <input type="button" value="stop" id="stop" />
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <!--row12 with the buttons to play the game-->
+        <!-- buttons to play or need hint, display towards very bottom of the screen-->
+        <div class="row12">
+            <div class="col-lg-12">
+                <button id="hint">Hint</button>
+                <button id="reset">Play again</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k "
+        crossorigin="anonymous "></script>
+</body>
+<!-- Footer -->
+
+</html>
