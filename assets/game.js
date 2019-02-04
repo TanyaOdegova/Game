@@ -59,7 +59,8 @@ window.runGame = function () {
   }
 
 
-  // Hangman
+  // Hangman - I could not figure out the handman and how to make it, I googled it.
+  //I understand the concept of getting the element by ID but I could not figure out how to attach the action of drawing a stick with the click simultaneously
 
   var canvas = function () {
 
