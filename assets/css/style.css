@@ -11,6 +11,10 @@ text-align:center;
 font-size:18px;
 }
 
+A:link { COLOR: white; TEXT-DECORATION: none; font-weight: normal }
+A:visited { COLOR: white; TEXT-DECORATION: none; font-weight: normal }
+A:active { COLOR: peachpuff; TEXT-DECORATION: none } 
+
 img {
   width: 600px;
   height: 250px;
@@ -20,9 +24,6 @@ img {
   box-sizing: border-box;
   padding: 0px 30px 20px;
 }
-
-
-
 p {
   color: coral;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -36,7 +37,6 @@ h1 {
   text-align: center;
   padding: 5px;
 }
-
 h2 {
   font-family: 'Kaushan Script';
   font-size: 25px;
@@ -44,33 +44,24 @@ h2 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-
-
 #hold {
-  width: 600px;
+  width: 100%;
   height: 50px;
-  
+  clear: both;
+  margin-left: 100px;
+  margin-top: 20px;
 }
-
 canvas{
   color:white;
   border: white dashed 2px;
   padding:15px;
 }
-
-
-
-
 #alphabet {
   margin:25px auto;
   padding:0;
   max-width:600px;
   width: 400px;
-  
-  
 }
-
 #alphabet li {
   float:left;
   margin: 0 10px 10px 0;
@@ -86,7 +77,8 @@ canvas{
   }
 
 #my-word {
-  margin: 0;
+  margin: 50px;
+  padding: 50px;
   float: left;
   display: block;
   padding: 0;
@@ -108,25 +100,40 @@ canvas{
 
 #mylives{
   font-size:25px;
-  width: 50%;
+  clear: both;
+  width: 100%;
   height: 100px;
   text-align:center;
   display:inline block;
   border: 5px;
   margin: 10px 5px 5px 10px;
 }
+#clue {
+  padding: 10px;
+  margin-bottom: 50px;
+}
 
 #play {
   background:rgb(236, 99, 49);
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
+  width: 50px;
+  height: 30px;
+  padding: 5px;
 }
 #pause {
   background: rgb(234, 133, 97);
   margin: 10px;
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  
 }
 #stop {
   background: #e7b6a4;
   margin: 10px;
+  width: 50px;
+  height: 30px;
+  padding: 5px;
 }
 button{
   
@@ -158,11 +165,12 @@ button{
   }
   .footer {
     margin-left: 0px;
+    margin-top: 30px;
     background-color: black;
     color: coral;
     position: bottom-fixed;
     font-family: "Kaushan Script";
-    padding-left: 100px;
+    padding-left: 0px;
     border-top: 10px;
     clear: both;
     flex-shrink: 0;
