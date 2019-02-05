@@ -1,4 +1,6 @@
 window.runGame = function () {
+
+  var showClue = document.getElementById('clue');
   //create an array with the alphabet letters
   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   var showLives = document.getElementById("mylives", "hint", "clue");
@@ -165,6 +167,25 @@ window.runGame = function () {
     result();
     comments();
     canvas();
+
+    document.getElementById("play").addEventListener('click', function (e) {
+      console.log("play");
+      document.getElementById(word).play();
+  
+    });
+    //function to Stop the same song
+    document.getElementById("stop").addEventListener('click', function (e) {
+      console.log("stop");
+      document.getElementById(word).pause();
+      document.getElementById(word).currentTime = 0;
+  
+    });
+  
+    document.getElementById("pause").addEventListener('click', function (e) {
+      console.log("pause");
+      document.getElementById(word).pause();
+  
+    });
   }
 
   play();
@@ -172,24 +193,7 @@ window.runGame = function () {
   // SECTION of JS for Songs. play music or pause it
   ///Notes for me - do not forget to tie specific songs to the answers
   //function to play a song
-  document.getElementById("play").addEventListener('click', function (e) {
-    console.log("play");
-    document.getElementById("Cant-Stop").play();
-
-  });
-  //function to Stop the same song
-  document.getElementById("stop").addEventListener('click', function (e) {
-    console.log("stop");
-    document.getElementById("Cant-Stop").pause();
-    document.getElementById("Cant-Stop").currentTime = 0;
-
-  });
-
-  document.getElementById("pause").addEventListener('click', function (e) {
-    console.log("stop");
-    document.getElementById("Cant-Stop").pause();
-
-  });
+  
 
   // Hint
 //having trouble to tie the hint to the correct song
