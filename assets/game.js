@@ -149,20 +149,11 @@ window.runGame = function () {
 
   // Play
   var play = function () {
-    survivalsongs = [
-      ["cant-stop"],
-      ["eye-of-the-tiger"],
-      ["fighter"],
-      ["survivor"],
-      ["white flag"],
-      ["i-will-survive"],
-      ["my-way"],
-      ["not-afraid"],
-      ["stayin-alive"]
-    ];
+    survivalsongs = ["cant-stop", "eye-of-the-tiger", "fighter", "survivor", "white-flag", "i-will-survive", "my-way","not-afraid", "stayin-alive"];
+    
 
-    chosenCategory = survivalsongs[Math.floor(Math.random() * survivalsongs.length)];
-    word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
+    word = survivalsongs[Math.floor(Math.random() * survivalsongs.length)];
+    //word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
     word = word.replace(/\s/g, "-");
     console.log(word);
     buttons();
@@ -204,30 +195,28 @@ window.runGame = function () {
 //having trouble to tie the hint to the correct song
   hint.onclick = function () {
 
-    hints = [
+    var hints = [
       //index 0 will be can't stop clue
-      ["The song is about trial and error and how we learn from the mistakes we make that are caused by temptation. In this case drug abuse"],
+      "The song is about trial and error and how we learn from the mistakes we make that are caused by temptation. In this case drug abuse",
       //index 1 will be eye of the tiger clue
-      ["This was the theme song to Rocky III"],
+      "This was the theme song to Rocky III",
       //index 2 will be fighter clue
-      ["This song a 21-year old female pop-vocalist wrote about her perseverance in the face of public scrutiny and abuse father"],
+      "This song a 21-year old female pop-vocalist wrote about her perseverance in the face of public scrutiny and abuse father",
       //index 3 will be survivor song
-      ["This song signifies a rebirth of the famous girl-band after three former bandmates quit the tour and issued a lawsuit against the group"],
+      "This song signifies a rebirth of the famous girl-band after three former bandmates quit the tour and issued a lawsuit against the group",
       //index 4 will be white flag clue
-      ["This song's title is a symbol of surrender"],
-      //index 5 will be i will survive clue
-      ["This female-empowerment anthem is about moving on after a bad relationship"],
-      //index 6 will be my way clue
-      ["This song is about a man who is looking back fondly on a life he lived on his own terms"],
-      //index 7 will not afraid clue
-      ["In this song a famous rapper admits his past mistakes and promises his fans to come back stronger and persevere his mental illness and drug abuse"],
-      //index 8 will be stayin alive clue
-      ["This song has been written specifically for the Saturday Night Fever movie where John Travolta plays a young man working a dead-end job with only dancing and music helping him to see the light at the end of the tunnel"]
-    ];
+      "This song's title is a symbol of surrender",
+      
+      "This female-empowerment anthem is about moving on after a bad relationship",
+      
+      "This song is about a man who is looking back fondly on a life he lived on his own terms",
+      
+      "In this song a famous rapper admits his past mistakes and promises his fans to come back stronger and persevere his mental illness and drug abuse", 
+      "This song has been written specifically for the Saturday Night Fever movie where John Travolta plays a young man working a dead-end job with only dancing and music helping him to see the light at the end of the tunnel"];
 
-    var categoryIndex = survivalsongs(indexOf[i]);
+    //var categoryIndex = survivalsongs.indexOf(survivalsongs[i]);
     var hintIndex = survivalsongs.indexOf(word);
-    showClue.innerHTML = "Clue: - " + hints[categoryIndex][hintIndex];
+    showClue.innerHTML = "Clue: - " + hints[hintIndex];
   };
 }
 document.addEventListener('DOMContentLoaded', function () {
